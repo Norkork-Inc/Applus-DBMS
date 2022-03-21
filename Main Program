@@ -1,0 +1,271 @@
+TextWindow.Clear()
+rama = File.ReadLine(Program.Directory+"\Locker\XOX00.nrk",1)
+If(rama = 0)Then
+TextWindow.BackgroundColor = "White"
+TextWindow.ForegroundColor = "Black"
+ElseIf(rama = 1)Then
+TextWindow.BackgroundColor = "Green"
+TextWindow.ForegroundColor = "Black" 
+ElseIf(rama = 2)Then
+TextWindow.BackgroundColor = "Black"
+TextWindow.ForegroundColor = "White" 
+ElseIf(rama = 3)Then
+TextWindow.BackgroundColor = "Red"
+TextWindow.ForegroundColor = "Black" 
+ElseIf(rama = 4)Then
+TextWindow.BackgroundColor = "Cyan"
+TextWindow.ForegroundColor = "Black" 
+ElseIf(rama = 5)Then
+TextWindow.BackgroundColor = "Yellow"
+TextWindow.ForegroundColor = "Black" 
+ElseIf(rama = 6)Then
+TextWindow.BackgroundColor = "Magenta"
+TextWindow.ForegroundColor = "Black"
+EndIf
+
+TextWindow.WriteLine("Welcome to APPLUS.dbms") 
+TextWindow.WriteLine("All rights reserved to Norkork.inc.")
+TextWindow.Pause()
+TextWindow.Clear()
+
+choose:
+
+TextWindow.WriteLine("Enter the type of institution you have")
+TextWindow.WriteLine("Type 1 for school")
+TextWindow.WriteLine("Type 2 for tution")
+TextWindow.WriteLine("Type 3 for other")
+type = TextWindow.ReadNumber()
+If(type = "1")Then
+  ins = "School"
+ElseIf(type = "2")Then
+  ins = "Tution"
+ElseIf(type = "3")Then
+  TextWindow.WriteLine("Enter the type of institution you have :")
+  TextWindow.Write("")
+  oth = TextWindow.Read()
+  ins = oth
+EndIf
+
+TextWindow.WriteLine("Enter the name of your "+ ins +" in short")
+TextWindow.Write("")
+school = TextWindow.Read()
+TextWindow.Pause()
+TextWindow.Clear()
+
+as:
+
+TextWindow.WriteLine("Enter the Fields that you want to be appeared in your Record")
+TextWindow.WriteLine("")
+TextWindow.WriteLine("Enter the first field :")
+TextWindow.WriteLine("This is your Primary Key.")
+TextWindow.Write("")
+id = TextWindow.Read()
+
+ka:
+
+TextWindow.WriteLine("Enter the second field :")
+TextWindow.Write("")
+id2 = TextWindow.Read()
+
+ad:
+
+TextWindow.WriteLine("Enter the third field :")
+TextWindow.Write("")
+id3 = TextWindow.Read()
+
+rj:
+
+TextWindow.WriteLine("Enter the fourth field :")
+TextWindow.Write("")
+id4 = TextWindow.Read()
+
+an:
+
+TextWindow.WriteLine("Enter the fifth field :")
+TextWindow.Write("")
+id5 = TextWindow.Read()
+
+rc:
+
+TextWindow.WriteLine("Enter the sixth field :")
+TextWindow.Write("")
+id6 = TextWindow.Read()
+
+TextWindow.WriteLine("Are you sure you have typed correctly")
+TextWindow.WriteLine("or do you want to change something in your text")
+TextWindow.WriteLine("Press '1' to say yes or '2' to say no")
+TextWindow.Write("")
+kou = TextWindow.ReadNumber()
+If(kou = "1")Then
+  TextWindow.WriteLine("Where did you made mistake ?")
+  TextWindow.WriteLine("Press 1 to change from the 1st field")
+  TextWindow.WriteLine("Press 2 to change from the 2nd field")
+  TextWindow.WriteLine("Press 3 to change from the 3rd field")
+  TextWindow.WriteLine("Press 4 to change from the 4th field")
+  TextWindow.WriteLine("Press 5 to change from the 5th field")
+  TextWindow.WriteLine("Press 6 to change the 6th field")
+  TextWindow.Write("")
+  pt = TextWindow.ReadNumber()
+  If(pt = 1)Then
+    Goto as
+  ElseIf(pt = 2)Then
+    Goto ka
+    ElseIf(pt = 3)Then
+      Goto ad
+      ElseIf(pt = 4)Then
+        Goto rj
+        ElseIf(pt = 5)Then
+          Goto an
+          ElseIf(pt = 6)Then
+            Goto rc
+
+  EndIf  
+ElseIf(kou = "2")Then
+  Goto moh 
+  TextWindow.Pause()
+ TextWindow.Clear() 
+EndIf
+
+moh:
+TextWindow.WriteLine("Do you want to straight goto the note part or you want to customize your program")
+TextWindow.WriteLine("Press 1 to goto the main part")
+TextWindow.WriteLine("Press 2 to customize you Program")
+TextWindow.Write("")
+select = TextWindow.ReadNumber()
+If(select = "1")Then
+  Goto Main
+  TextWindow.Pause()
+  TextWindow.Clear()
+  
+ElseIf(select = "2")Then
+  
+  TextWindow.Write("Choose the theme for the program :Dark;Light ")
+  TextWindow.Write("")
+
+Theme = TextWindow.Read()
+TextWindow.Pause()
+
+If(Theme = " Dark" Or Theme = " dark" Or Theme = "dark" Or Theme = "Dark")Then
+  TextWindow.BackgroundColor = "Black"
+  TextWindow.ForegroundColor = "White"
+  
+ElseIf(Theme = " Light" Or Theme = " light"Or Theme = "light" Or Theme = "Light")Then
+  TextWindow.BackgroundColor = "White"
+  TextWindow.ForegroundColor = "Black"
+TextWindow.Pause()
+TextWindow.Clear()
+EndIf
+Goto Main
+
+EndIf
+
+Main:
+
+TextWindow.WriteLine("Enter The Student's "+ id + ":")
+TextWindow.Write("")
+stuname = TextWindow.Read()
+TextWindow.Pause()
+TextWindow.Clear()
+
+Dob:
+
+TextWindow.WriteLine("Enter The Student's " +id2 + ":")
+TextWindow.Write("")
+dob = TextWindow.Read()
+TextWindow.Pause()
+TextWindow.Clear()
+
+std:
+
+TextWindow.WriteLine("Enter The Student's " +id3+ " :")
+TextWindow.Write("")
+class = TextWindow.Read()
+TextWindow.Pause()
+TextWindow.Clear()
+
+sec:
+
+TextWindow.WriteLine("Enter The Student's " +id4+" :")
+TextWindow.Write("")
+sec = TextWindow.Read()
+TextWindow.Pause()
+TextWindow.Clear()
+
+roll:
+
+TextWindow.WriteLine("Enter The Student's " +id5+" :")
+TextWindow.Write("")
+roll = TextWindow.Read()
+TextWindow.Pause()
+TextWindow.Clear()
+
+ph:
+
+TextWindow.WriteLine("Enter The Student's "+id6+" :")
+TextWindow.Write("")
+stuph = TextWindow.Read()
+TextWindow.Pause()
+
+Goto dog
+
+dog:
+
+TextWindow.WriteLine("Are you sure you have typed correctly")
+TextWindow.WriteLine("or do you wnat to change something in your text")
+TextWindow.WriteLine("Press '1' to say yes or '2' to say no")
+TextWindow.Write("")
+np = TextWindow.ReadNumber()
+If(np = "1")Then
+  TextWindow.WriteLine("OH ho! Where did you made the mistake ?")
+  TextWindow.WriteLine("Press 1 to change from the 1st record")
+  TextWindow.WriteLine("Press 2 to change from the 2nd record")
+  TextWindow.WriteLine("Press 3 to change from the 3rd record")
+  TextWindow.WriteLine("Press 4 to change from the 4th record")
+  TextWindow.WriteLine("Press 5 to change from the 5th record")
+  TextWindow.WriteLine("Press 6 to change the 6th record")
+  TextWindow.Write("")
+  ch = TextWindow.ReadNumber()
+  If(ch = 1)Then
+    Goto Main
+  ElseIf(ch = 2)Then
+    Goto Dob
+    ElseIf(ch = 3)Then
+      Goto std
+      ElseIf(ch = 4)Then
+        Goto sec
+        ElseIf(ch = 5)Then
+          Goto roll
+          ElseIf(ch = 6)Then
+            Goto ph
+  EndIf          
+ElseIf(np= "2")Then
+  
+  TextWindow.WriteLine("Where do you want to go?")
+  TextWindow.WriteLine("Press 1 to save the record and continue")
+  TextWindow.WriteLine("Press 2 to save and exit")
+  TextWindow.WriteLine("Press 3 to go to program selection")
+  TextWindow.Write("")
+  fun = TextWindow.ReadNumber() 
+  If(fun = "1")Then
+    TextWindow.WriteLine("Enter the name of the file : ")
+    TextWindow.Write("")
+    f = TextWindow.Read() 
+      record = "(" + school + ")" + id+ " = "+stuname +" , " +id2 + " = "+ dob +" , "+id3+" = "+ class +" , "+id4+" = "+ sec +" , "+id5+" = "+ roll + " , "+id6+" = "+stuph+ "  On this day your this record was last modified = " + Clock.Date
+      File.InsertLine(Program.Directory +"\Applus\"+f+".apldb" ,1 , record)
+    TextWindow.Clear()
+    Goto ridz
+
+  Elseif(fun = "3")Then
+    TextWindow.Clear()
+    Goto ridz
+  Elseif(fun = "2")Then
+     TextWindow.WriteLine("Enter the name of the file :")
+    TextWindow.Write("")
+    f = TextWindow.Read()  
+   record = "(" + school + ")" + id+ " = "+stuname +" , " +id2 + " = "+ dob +" , "+id3+" = "+ class +" , "+id4+" = "+ sec +" , "+id5+" = "+ roll + " , "+id6+" = "+stuph+ "  On this day your this record was last modified = " + Clock.Date
+   File.InsertLine(Program.Directory +"\Applus\"+f+".apldb" ,1 , record)
+      TextWindow.Clear()
+   Goto ridz
+
+  EndIf
+  EndIf
