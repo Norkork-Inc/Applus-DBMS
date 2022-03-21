@@ -1,28 +1,3 @@
-TextWindow.Clear()
-rama = File.ReadLine(Program.Directory+"\Locker\XOX00.nrk",1)
-If(rama = 0)Then
-TextWindow.BackgroundColor = "White"
-TextWindow.ForegroundColor = "Black"
-ElseIf(rama = 1)Then
-TextWindow.BackgroundColor = "Green"
-TextWindow.ForegroundColor = "Black" 
-ElseIf(rama = 2)Then
-TextWindow.BackgroundColor = "Black"
-TextWindow.ForegroundColor = "White" 
-ElseIf(rama = 3)Then
-TextWindow.BackgroundColor = "Red"
-TextWindow.ForegroundColor = "Black" 
-ElseIf(rama = 4)Then
-TextWindow.BackgroundColor = "Cyan"
-TextWindow.ForegroundColor = "Black" 
-ElseIf(rama = 5)Then
-TextWindow.BackgroundColor = "Yellow"
-TextWindow.ForegroundColor = "Black" 
-ElseIf(rama = 6)Then
-TextWindow.BackgroundColor = "Magenta"
-TextWindow.ForegroundColor = "Black"
-EndIf
-
 TextWindow.WriteLine("Welcome to APPLUS.dbms") 
 TextWindow.WriteLine("All rights reserved to Norkork.inc.")
 TextWindow.Pause()
